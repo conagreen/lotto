@@ -12,4 +12,12 @@ public class LottoNumbers {
             this.numbers.add(new LottoNumber(number));
         }
     }
+
+    public List<Integer> getNumbers() {
+        List<Integer> lottoNumbers = new ArrayList<>();
+        for (LottoNumber number : this.numbers) {
+            lottoNumbers.add(number.getNumber());
+        }
+        return lottoNumbers;
+    }
 }

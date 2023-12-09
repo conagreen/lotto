@@ -28,8 +28,7 @@ public class LottoService {
         List<Integer> lottoNumbers = new ArrayList<>();
         for (int i = 1; i <= LOTTO_NUMBER_RANGE; i++) lottoNumbers.add(i);
         Collections.shuffle(lottoNumbers);
-        lottoNumbers.subList(0, LOTTO_NUMBER_COUNT);
-        return new LottoNumbers(lottoNumbers);
+        return new LottoNumbers(lottoNumbers.subList(0, LOTTO_NUMBER_COUNT));
     }
 
     private long calculateLottoTicketCount(long totalAmount) {

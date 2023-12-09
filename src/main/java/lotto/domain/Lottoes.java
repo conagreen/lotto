@@ -4,13 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Lottoes {
-    private List<Lotto> lottos = new ArrayList<>();
+    private List<Lotto> lottoes = new ArrayList<>();
 
     public void addLotto(Lotto lotto) {
-        lottos.add(lotto);
+        lottoes.add(lotto);
     }
 
     public long count() {
-        return lottos.size();
+        return lottoes.size();
+    }
+
+    public List<Lotto> getLottoes() {
+        return lottoes;
     }
 }
