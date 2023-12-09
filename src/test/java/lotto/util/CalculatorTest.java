@@ -15,4 +15,11 @@ class CalculatorTest {
         Assertions.assertThat(actual).isEqualTo(expected);
     }
 
+    @ParameterizedTest
+    @CsvSource(value = {"5 - 1:4", "3 - 3:0", "5 - 5 - 1:-1"}, delimiter = ':')
+    @DisplayName("뺄셈 테스트")
+    void 뺄셈_테스트(String input, long expected ) {
+        long actual = Calculator.subtract(input);
+        Assertions.assertThat(actual).isEqualTo(expected);
+    }
 }
