@@ -28,4 +28,13 @@ public class Calculator {
         }
         return answer;
     }
+
+    public static double divide(String input) {
+        String[] tokens = input.split(" ");
+        double answer = Long.parseLong(tokens[0]);
+        for (int i = 2; i < tokens.length; i++) {
+            answer /= Integer.parseInt(tokens[i++]);
+        }
+        return answer;
+    }
 }
