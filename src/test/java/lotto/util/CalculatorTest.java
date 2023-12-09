@@ -22,4 +22,12 @@ class CalculatorTest {
         long actual = Calculator.subtract(input);
         Assertions.assertThat(actual).isEqualTo(expected);
     }
+
+    @ParameterizedTest
+    @CsvSource(value = {"5 * 0:0", "3 * 3:9", "5 * 5 * 2:50"}, delimiter = ':')
+    @DisplayName("곱셈 테스트")
+    void 곱셈_테스트(String input, long expected ) {
+        long actual = Calculator.multiply(input);
+        Assertions.assertThat(actual).isEqualTo(expected);
+    }
 }

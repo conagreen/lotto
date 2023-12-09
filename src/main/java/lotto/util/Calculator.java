@@ -19,4 +19,13 @@ public class Calculator {
         }
         return answer;
     }
+
+    public static long multiply(String input) {
+        String[] tokens = input.split(" ");
+        long answer = Long.parseLong(tokens[0]);
+        for (int i = 2; i < tokens.length; i++) {
+            answer *= Integer.parseInt(tokens[i++]);
+        }
+        return answer;
+    }
 }
